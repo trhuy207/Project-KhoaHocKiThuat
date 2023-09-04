@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
 import { useSafeAreaInsets } from 'react-native-safe-area-context';

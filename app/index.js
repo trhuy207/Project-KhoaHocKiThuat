@@ -6,11 +6,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
-import Home from '../src/components/Home/Home'
+import Main from '../src/components/main'
 import Chemistry from '../src/components/Chemistry/Chemistry'
 import Math from '../src/components/Math/Math'
 import Physics from '../src/components/Physics/Physics'
 import English from '../src/components/English/English'
+
+import Tkb from '../src/components/Tkb/Tkb';
+import UpdateTkb from '../src/components/Tkb/UpdateTkb/UpdateTkb';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -20,14 +24,10 @@ const Index = () => {
             <NavigationContainer independent={true}>
                 <Stack.Navigator >
                     <Stack.Screen 
-                        name='Home' 
-                        component={Home}
+                        name='Main' 
+                        component={Main}
                         options={{
-                            title: 'AH STUDY',
-                            headerTitleStyle: {
-                                fontWeight: 'bold',
-                                fontSize: 30,
-                            },
+                            headerShown: false
                         }}
                     />
 
@@ -71,6 +71,30 @@ const Index = () => {
                         component={English}
                         options={{
                             title: 'English',
+                            headerTitleStyle: {
+                                fontWeight: 'bold',
+                                fontSize: 30,
+                            },
+                        }}
+                    />
+
+                    <Stack.Screen 
+                        name='Tkb' 
+                        component={Tkb}
+                        options={{
+                            title: 'Thời Khóa Biểu',
+                            headerTitleStyle: {
+                                fontWeight: 'bold',
+                                fontSize: 30,
+                            },
+                        }}
+                    />
+
+                    <Stack.Screen 
+                        name='UpdateTkb' 
+                        component={UpdateTkb}
+                        options={{
+                            title: 'Chỉnh Sửa Thời Khóa Biểu',
                             headerTitleStyle: {
                                 fontWeight: 'bold',
                                 fontSize: 30,
