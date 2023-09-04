@@ -61,7 +61,7 @@ const UpdateTkb = ({ navigation, route}) => {
     }
 
     return (
-        <View>
+        <View style={styles.container}>
             <ScrollView>
                 <View style={styles.savePart}>
                     <TouchableOpacity 
@@ -90,7 +90,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setCurrentMl1}
                                 value={currentMl1}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                             <Text style={styles.morningPartText}>Tiết 2</Text>
                             <TextInput 
@@ -99,7 +99,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setCurrentMl2}
                                 value={currentMl2}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                             <Text style={styles.morningPartText}>Tiết 3</Text>
                             <TextInput 
@@ -108,7 +108,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setCurrentMl3}
                                 value={currentMl3}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                             <Text style={styles.morningPartText}>Tiết 4</Text>
                             <TextInput 
@@ -117,7 +117,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setCurrentMl4}
                                 value={currentMl4}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                             <Text style={styles.morningPartText}>Tiết 5</Text>
                             <TextInput 
@@ -126,7 +126,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setCurrentMl5}
                                 value={currentMl5}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                         </View>
                     </View>
@@ -142,7 +142,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setcurrentAl1}
                                 value={currentAl1}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                             <Text style={styles.afternoonPartText}>Tiết 2</Text>
                             <TextInput 
@@ -151,7 +151,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setcurrentAl2}
                                 value={currentAl2}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                             <Text style={styles.afternoonPartText}>Tiết 3</Text>
                             <TextInput 
@@ -160,7 +160,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setcurrentAl3}
                                 value={currentAl3}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                             <Text style={styles.afternoonPartText}>Tiết 4</Text>
                             <TextInput 
@@ -169,7 +169,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setcurrentAl4}
                                 value={currentAl4}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                             <Text style={styles.afternoonPartText}>Tiết 5</Text>
                             <TextInput 
@@ -178,7 +178,7 @@ const UpdateTkb = ({ navigation, route}) => {
                                 maxLength={50}
                                 onChangeText={setcurrentAl5}
                                 value={currentAl5}
-                                style={{padding: 5, backgroundColor: 'white', borderRadius: 15}}
+                                style={styles.input}
                             />
                         </View>
                     </View>

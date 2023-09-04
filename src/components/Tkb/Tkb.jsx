@@ -44,6 +44,7 @@ const Tkb = ({ navigation }) => {
                     showsVerticalScrollIndicator={false}
                     decelerationRate='fast'
                     keyExtractor={i => i.id}
+                    scrollEnabled={false}
                     renderItem={({item}) => {
                         return(
                             <View style={styles.showListDate}>
