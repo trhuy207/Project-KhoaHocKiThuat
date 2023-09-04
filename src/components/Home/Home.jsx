@@ -16,7 +16,11 @@ const Home = ({ navigation }) => {
             paddingLeft: insets.left,
             paddingRight: insets.right,
         }}>
-            <Text>Home Screen</Text>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Tkb')}
+            >
+                <Text>Tkb</Text>
+            </TouchableOpacity>
         </View>
     )
 }

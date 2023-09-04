@@ -38,7 +38,7 @@ const Index = () => {
                             title: 'Chemistry',
                             headerTitleStyle: {
                                 fontWeight: 'bold',
-                                fontSize: 30,
+                                fontSize: 25,
                             },
                         }}
                     />
@@ -50,7 +50,7 @@ const Index = () => {
                             title: 'Math',
                             headerTitleStyle: {
                                 fontWeight: 'bold',
-                                fontSize: 30,
+                                fontSize: 25,
                             },
                         }}
                     />
@@ -61,7 +61,7 @@ const Index = () => {
                             title: 'Physics',
                             headerTitleStyle: {
                                 fontWeight: 'bold',
-                                fontSize: 30,
+                                fontSize: 25,
                             },
                         }}
                     />
@@ -73,7 +73,7 @@ const Index = () => {
                             title: 'English',
                             headerTitleStyle: {
                                 fontWeight: 'bold',
-                                fontSize: 30,
+                                fontSize: 25,
                             },
                         }}
                     />
@@ -85,7 +85,7 @@ const Index = () => {
                             title: 'Thời Khóa Biểu',
                             headerTitleStyle: {
                                 fontWeight: 'bold',
-                                fontSize: 30,
+                                fontSize: 25,
                             },
                         }}
                     />
@@ -94,10 +94,11 @@ const Index = () => {
                         name='UpdateTkb' 
                         component={UpdateTkb}
                         options={{
-                            title: 'Chỉnh Sửa Thời Khóa Biểu',
+                            title: 'Chỉnh Sửa',
+                            headerBackTitle: 'Trở lại',
                             headerTitleStyle: {
                                 fontWeight: 'bold',
-                                fontSize: 30,
+                                fontSize: 25,
                             },
                         }}
                     />
