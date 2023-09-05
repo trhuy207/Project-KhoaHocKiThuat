@@ -8,9 +8,6 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 import Main from '../src/components/main'
 import Chemistry from '../src/components/Chemistry/Chemistry'
-import Math from '../src/components/Math/Math'
-import Physics from '../src/components/Physics/Physics'
-import English from '../src/components/English/English'
 
 import UpdateTkb from '../src/components/Tkb/UpdateTkb/UpdateTkb';
 
@@ -35,41 +32,6 @@ const Index = () => {
                         component={Chemistry}
                         options={{
                             title: 'Chemistry',
-                            headerTitleStyle: {
-                                fontWeight: 'bold',
-                                fontSize: 25,
-                            },
-                        }}
-                    />
-
-                    <Stack.Screen 
-                        name='Math' 
-                        component={Math}
-                        options={{
-                            title: 'Math',
-                            headerTitleStyle: {
-                                fontWeight: 'bold',
-                                fontSize: 25,
-                            },
-                        }}
-                    />
-                    <Stack.Screen 
-                        name='Physics' 
-                        component={Physics}
-                        options={{
-                            title: 'Physics',
-                            headerTitleStyle: {
-                                fontWeight: 'bold',
-                                fontSize: 25,
-                            },
-                        }}
-                    />
-
-                    <Stack.Screen 
-                        name='English' 
-                        component={English}
-                        options={{
-                            title: 'English',
                             headerTitleStyle: {
                                 fontWeight: 'bold',
                                 fontSize: 25,
