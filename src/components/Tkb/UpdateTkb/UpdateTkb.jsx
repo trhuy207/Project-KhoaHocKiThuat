@@ -63,13 +63,15 @@ const UpdateTkb = ({ navigation, route}) => {
     return (
         <View style={styles.container}>
             <ScrollView>
-                <View style={styles.savePart}>
-                    <TouchableOpacity 
-                        style={styles.saveBtn}
-                        onPress={saveTkb}
-                    >
-                        <Text style={styles.saveBtnText}>Lưu</Text>
-                    </TouchableOpacity>
+                <View style={styles.save}>
+                    <View style={styles.savePart}>
+                        <TouchableOpacity 
+                            style={styles.saveBtn}
+                            onPress={saveTkb}
+                        >
+                            <Text style={styles.saveBtnText}>Lưu</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
 
                 {/* Body */}
@@ -82,11 +84,15 @@ const UpdateTkb = ({ navigation, route}) => {
                     </View>
 
                     {/* Lession Part */}
-                    <View style={[styles.lessionPart, styles.lessionPartElevated]}>
-                        <Text style={styles.timeTitle}>Buổi Sáng</Text>
-
-                        <Text style={styles.morningPartText}>Tiết 1</Text>
+                    <View style={[styles.lessonPart, styles.lessonPartElevated]}>
+                        <View style={styles.cardTimeTitle}>
+                            <Text style={styles.timeTitle}>Buổi Sáng</Text>
+                        </View>
                         
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 1</Text>
+                        </View>
+
                         <View style={styles.cardMorningPart}>
                             <TextInput 
                                 editable
@@ -97,8 +103,10 @@ const UpdateTkb = ({ navigation, route}) => {
                                 style={styles.input}
                             />
                         </View>
-
-                        <Text style={styles.morningPartText}>Tiết 2</Text>
+                        
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 2</Text>
+                        </View>
 
                         <View style={styles.cardMorningPart}>
                             <TextInput 
@@ -110,9 +118,11 @@ const UpdateTkb = ({ navigation, route}) => {
                                 style={styles.input}
                             />
                         </View>
-
-                        <Text style={styles.morningPartText}>Tiết 3</Text>
                         
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 3</Text>
+                        </View>
+
                         <View style={styles.cardMorningPart}>
                             <TextInput 
                                 editable
@@ -123,8 +133,10 @@ const UpdateTkb = ({ navigation, route}) => {
                                 style={styles.input}
                             />
                         </View>
-
-                        <Text style={styles.morningPartText}>Tiết 4</Text>
+                        
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 4</Text>
+                        </View>
 
                         <View style={styles.cardMorningPart}>
                             <TextInput 
@@ -137,7 +149,9 @@ const UpdateTkb = ({ navigation, route}) => {
                             />
                         </View>
 
-                        <Text style={styles.morningPartText}>Tiết 5</Text>
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 5</Text>
+                        </View>
 
                         <View style={styles.cardMorningPart}>
                             <TextInput 
@@ -150,9 +164,13 @@ const UpdateTkb = ({ navigation, route}) => {
                             />
                         </View>
 
-                        <Text style={styles.afternoonPartTitle}>Buổi Chiều</Text>
+                        <View style={styles.cardTimeTitle}>
+                            <Text style={styles.timeTitle}>Buổi Chiều</Text>
+                        </View>
 
-                        <Text style={styles.afternoonPartText}>Tiết 1</Text>
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 1</Text>
+                        </View>
 
                         <View style={styles.cardAfternoonPart}>
                             <TextInput 
@@ -165,7 +183,9 @@ const UpdateTkb = ({ navigation, route}) => {
                             />
                         </View>
 
-                        <Text style={styles.afternoonPartText}>Tiết 2</Text>
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 2</Text>
+                        </View>
 
                         <View style={styles.cardAfternoonPart}>
                             <TextInput 
@@ -178,7 +198,9 @@ const UpdateTkb = ({ navigation, route}) => {
                             />
                         </View>
 
-                        <Text style={styles.afternoonPartText}>Tiết 3</Text>
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 3</Text>
+                        </View>
 
                         <View style={styles.cardAfternoonPart}>
                             <TextInput 
@@ -191,7 +213,9 @@ const UpdateTkb = ({ navigation, route}) => {
                             />
                         </View>
 
-                        <Text style={styles.afternoonPartText}>Tiết 4</Text>
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 4</Text>
+                        </View>
 
                         <View style={styles.cardAfternoonPart}>
                             <TextInput 
@@ -204,7 +228,9 @@ const UpdateTkb = ({ navigation, route}) => {
                             />
                         </View>
 
-                        <Text style={styles.afternoonPartText}>Tiết 5</Text>
+                        <View style={styles.cardLessonTitle}>
+                            <Text style={styles.lessonTitle}>Tiết 5</Text>
+                        </View>
 
                         <View style={styles.cardAfternoonPart}>
                             <TextInput 
