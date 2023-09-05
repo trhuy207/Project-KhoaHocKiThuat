@@ -2,6 +2,8 @@ import { View, Text, FlatList, TouchableOpacity, ScrollView } from 'react-native
 import React, { useState, useEffect } from 'react'
 import { Row, Table, TableWrapper, Rows } from 'react-native-table-component';
 
+import Icon from 'react-native-vector-icons/MaterialIcons'
+
 import * as SQLite from 'expo-sqlite'
 
 import styles from './Tkb.style';
@@ -15,7 +17,6 @@ const Tkb = ({ navigation }) => {
         db.transaction(tx => {
             tx.executeSql('SELECT * FROM tkb', null,
                 (txObj, resultSet) => setSchedule(resultSet.rows._array),
-                (txObj, error) => console.log(error)
             );
         });
     }, [db])
@@ -50,16 +51,19 @@ const Tkb = ({ navigation }) => {
                             <View style={styles.showListDate}>
                                 <View style={[styles.card, styles.cardElevated]}>
                                     <View style={styles.cardBody}>
-                                        <Text style={styles.cardTitle}>{item.day_name}</Text>
+                                        <View style={styles.cardTitle}>
+                                            <Text style={styles.cardTitleText}>{item.day_name}</Text>
 
-                                        <TouchableOpacity 
-                                            style={styles.cardBtn}
-                                            onPress={() => navigation.navigate('UpdateTkb', {
-                                                id: item.id
-                                            })}
-                                        >
-                                            <Text style={styles.cardBtnText}>Chỉnh Sửa</Text>
-                                        </TouchableOpacity>
+                                            <TouchableOpacity 
+                                                style={styles.cardBtn}
+                                                onPress={() => navigation.navigate('UpdateTkb', {
+                                                    id: item.id
+                                                })}
+                                            >   
+                                                <Icon name='update' size={25} style={styles.cardBtnText}/>
+                                                <Text style={styles.cardBtnText}>Chỉnh Sửa</Text>
+                                            </TouchableOpacity>
+                                        </View>
 
                                         <Table borderStyle={{borderWidth:1,}}>
                                             <Row 
@@ -68,7 +72,7 @@ const Tkb = ({ navigation }) => {
                                                     backgroundColor:'white',
                                                 }} 
                                                 height={40}
-                                                flexArr={[1,1,1]}
+                                                flexArr={[0.5,1,1]}
                                                 textStyle={{
                                                     textAlign: 'center',
                                                     fontSize: 14,
@@ -79,7 +83,7 @@ const Tkb = ({ navigation }) => {
                                                 <Rows 
                                                     data={item.rows} 
                                                     heightArr={[28, 28, 28, 28, 28]} 
-                                                    flexArr={[1, 1, 1, 1, 1]} 
+                                                    flexArr={[0.5, 1, 1, 1, 1]} 
                                                     style={{
                                                         backgroundColor: 'white'
                                                     }}
