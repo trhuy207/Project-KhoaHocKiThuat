@@ -12,7 +12,6 @@ import Math from '../src/components/Math/Math'
 import Physics from '../src/components/Physics/Physics'
 import English from '../src/components/English/English'
 
-import Tkb from '../src/components/Tkb/Tkb';
 import UpdateTkb from '../src/components/Tkb/UpdateTkb/UpdateTkb';
 
 
@@ -71,18 +70,6 @@ const Index = () => {
                         component={English}
                         options={{
                             title: 'English',
-                            headerTitleStyle: {
-                                fontWeight: 'bold',
-                                fontSize: 25,
-                            },
-                        }}
-                    />
-
-                    <Stack.Screen 
-                        name='Tkb' 
-                        component={Tkb}
-                        options={{
-                            title: 'Thời Khóa Biểu',
                             headerTitleStyle: {
                                 fontWeight: 'bold',
                                 fontSize: 25,

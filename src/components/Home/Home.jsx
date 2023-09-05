@@ -16,11 +16,6 @@ const Home = ({ navigation }) => {
             paddingLeft: insets.left,
             paddingRight: insets.right,
         }}>
-            <TouchableOpacity
-                onPress={() => navigation.navigate('Tkb')}
-            >
-                <Text>Tkb</Text>
-            </TouchableOpacity>
         </View>
     )
 }

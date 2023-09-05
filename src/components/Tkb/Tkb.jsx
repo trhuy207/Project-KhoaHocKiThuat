@@ -2,7 +2,7 @@ import { View, Text, FlatList, TouchableOpacity, ScrollView } from 'react-native
 import React, { useState, useEffect } from 'react'
 import { Row, Table, TableWrapper, Rows } from 'react-native-table-component';
 
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/AntDesign'
 
 import * as SQLite from 'expo-sqlite'
 
@@ -10,15 +10,44 @@ import styles from './Tkb.style';
 
 const db = SQLite.openDatabase('appdb.db')
 
+const generateBoxShadowStyle = (
+    xOffset,
+    yOffset,
+    shadowColorIos,
+    shadowOpacity,
+    shadowRadius,
+    elevation,
+    shadowColorAndroid,
+) => {
+    if (Platform.OS === 'ios') {
+        styles.cardElevated = {
+            shadowColor: shadowColorIos,
+            shadowOffset: {width: xOffset, height: yOffset},
+            shadowOpacity,
+            shadowRadius,
+        };
+    } else if (Platform.OS === 'android') {
+        styles.cardElevated = {
+            elevation,
+            shadowColor: shadowColorAndroid,
+        };
+    }
+};
+
+generateBoxShadowStyle(-2, 4, '#171717', 0.2, 3, 4, '#171717');
+
 const Tkb = ({ navigation }) => {
     const [schedule, setSchedule] = useState([])
 
     useEffect(() => {
-        db.transaction(tx => {
-            tx.executeSql('SELECT * FROM tkb', null,
-                (txObj, resultSet) => setSchedule(resultSet.rows._array),
-            );
+        const focusHandler = navigation.addListener('focus', () => {
+            db.transaction(tx => {
+                tx.executeSql('SELECT * FROM tkb', null,
+                    (txObj, resultSet) => setSchedule(resultSet.rows._array),
+                );
+            });
         });
+        return focusHandler;
     }, [db])
 
     const showTkb = () => {
@@ -60,7 +89,7 @@ const Tkb = ({ navigation }) => {
                                                     id: item.id
                                                 })}
                                             >   
-                                                <Icon name='update' size={25} style={styles.cardBtnText}/>
+                                                <Icon name='edit' size={25} style={styles.cardBtnText}/>
                                                 <Text style={styles.cardBtnText}>Chỉnh Sửa</Text>
                                             </TouchableOpacity>
                                         </View>

@@ -9,7 +9,33 @@ import styles from './UpdateTkb.style'
 
 const db = SQLite.openDatabase('appdb.db')
 
-const UpdateTkb = ({ navigation, route}) => {
+const generateBoxShadowStyle = (
+    xOffset,
+    yOffset,
+    shadowColorIos,
+    shadowOpacity,
+    shadowRadius,
+    elevation,
+    shadowColorAndroid,
+) => {
+    if (Platform.OS === 'ios') {
+        styles.lessonPartElevated = {
+            shadowColor: shadowColorIos,
+            shadowOffset: {width: xOffset, height: yOffset},
+            shadowOpacity,
+            shadowRadius,
+        };
+    } else if (Platform.OS === 'android') {
+        styles.lessonPartElevated = {
+            elevation,
+            shadowColor: shadowColorAndroid,
+        };
+    }
+};
+
+generateBoxShadowStyle(-2, 4, '#171717', 0.2, 3, 4, '#171717');
+
+const UpdateTkb = ({  navigation, route }) => {
     const [currentMl1, setCurrentMl1] = useState('');
     const [currentMl2, setCurrentMl2] = useState('');
     const [currentMl3, setCurrentMl3] = useState('');
@@ -50,8 +76,8 @@ const UpdateTkb = ({ navigation, route}) => {
     const saveTkb = () => {
         db.transaction(tx => {
             tx.executeSql('UPDATE tkb SET Ml1 = ?, Ml2 = ?, Ml3 = ?, Ml4 = ?, Ml5 = ?, Al1 = ?, Al2 = ?, Al3 = ?, Al4 = ?, Al5 = ? WHERE tkb_id = ?', [currentMl1, currentMl2, currentMl3, currentMl4, currentMl5, currentAl1, currentAl2, currentAl3, currentAl4, currentAl5, route.params.id],
-                (txObj, result) => Alert.alert('Message', 'Successful', [
-                    {text: 'OK!', onPress: () => navigation.navigate('Tkb')}
+                (txObj, result) => Alert.alert('Thông Báo!', 'Chỉnh Sửa Thành Công!', [
+                    {text: 'OK', onPress: () => navigation.navigate('Tkb')}
                 ]),
                 (txObj, error) => Alert.alert('Error', error, [
                     {text: 'OK!', onPress: () => {}}

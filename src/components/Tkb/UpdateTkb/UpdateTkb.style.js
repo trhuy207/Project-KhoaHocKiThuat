@@ -49,17 +49,13 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold',
         borderWidth: 1.25,
-        color: '#1B98F5'
+        color: '#049dff'
     },
 
     // Lession Part
     lessonPart: {
         justifyContent: 'center',
         alignItems: 'center',
-    },
-
-    lessonPartElevated: {
-        elevation: 22
     },
 
     cardTimeTitle: {
@@ -73,13 +69,13 @@ const styles = StyleSheet.create({
     },
 
     timeTitle: {
-        color: '#35BDD0',
+        color: '#538FFB',
         fontSize: 18,
         fontWeight: 'bold'
     },
 
     lessonTitle: {
-        color: '#538FFB',
+        color: '#35BDD0',
         fontSize: 16,
         fontStyle: 'italic'
     },

@@ -8,6 +8,20 @@
       "expo-router"
     ],
     "name": "Project-KhoaHocKiThuat",
-    "slug": "Project-KhoaHocKiThuat"
+    "slug": "Project-KhoaHocKiThuat",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ef016508-824a-4827-a64c-d905c3fc3ba7"
+      }
+    },
+    "android": {
+      "package": "com.quochuyph207.ProjectKhoaHocKiThuat"
+    },
+    "ios": {
+      "bundleIdentifier": "com.quochuyph207.ProjectKhoaHocKiThuat"
+    }
   }
 }

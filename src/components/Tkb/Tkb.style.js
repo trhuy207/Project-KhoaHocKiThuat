@@ -14,14 +14,6 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
 
-    cardElevated: {
-        elevation: 22
-    },
-
-    cardBody: {
-
-    },
-
     cardTitle: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -29,9 +21,9 @@ const styles = StyleSheet.create({
 
     cardTitleText: {
         padding: 10,
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: 'bold',
-        color: '#06adfd'
+        color: '#049dff'
     },
 
     cardBtn: {
