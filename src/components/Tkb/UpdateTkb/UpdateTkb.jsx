@@ -76,14 +76,18 @@ const UpdateTkb = ({ navigation, route}) => {
                 <View style={styles.bodyPart}>
                     {/* Day Name */}
                     <View style={styles.dayNamePart}>
-                        <Text style={styles.dayNameTitle}>{currentDayName}</Text>
+                        <View style={styles.cardDayNamePart}>
+                            <Text style={styles.dayNameTitle}>{currentDayName}</Text>
+                        </View>
                     </View>
 
-                    {/* Morning Part */}
-                    <View style={[styles.morningPart, styles.morningPartElevated]}>
-                        <View style={styles.morningPartBody}>
-                            <Text style={styles.morningPartTitle}>Buổi Sáng</Text>
-                            <Text style={styles.morningPartText}>Tiết 1</Text>
+                    {/* Lession Part */}
+                    <View style={[styles.lessionPart, styles.lessionPartElevated]}>
+                        <Text style={styles.timeTitle}>Buổi Sáng</Text>
+
+                        <Text style={styles.morningPartText}>Tiết 1</Text>
+                        
+                        <View style={styles.cardMorningPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}
@@ -92,7 +96,11 @@ const UpdateTkb = ({ navigation, route}) => {
                                 value={currentMl1}
                                 style={styles.input}
                             />
-                            <Text style={styles.morningPartText}>Tiết 2</Text>
+                        </View>
+
+                        <Text style={styles.morningPartText}>Tiết 2</Text>
+
+                        <View style={styles.cardMorningPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}
@@ -101,7 +109,11 @@ const UpdateTkb = ({ navigation, route}) => {
                                 value={currentMl2}
                                 style={styles.input}
                             />
-                            <Text style={styles.morningPartText}>Tiết 3</Text>
+                        </View>
+
+                        <Text style={styles.morningPartText}>Tiết 3</Text>
+                        
+                        <View style={styles.cardMorningPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}
@@ -110,7 +122,11 @@ const UpdateTkb = ({ navigation, route}) => {
                                 value={currentMl3}
                                 style={styles.input}
                             />
-                            <Text style={styles.morningPartText}>Tiết 4</Text>
+                        </View>
+
+                        <Text style={styles.morningPartText}>Tiết 4</Text>
+
+                        <View style={styles.cardMorningPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}
@@ -119,7 +135,11 @@ const UpdateTkb = ({ navigation, route}) => {
                                 value={currentMl4}
                                 style={styles.input}
                             />
-                            <Text style={styles.morningPartText}>Tiết 5</Text>
+                        </View>
+
+                        <Text style={styles.morningPartText}>Tiết 5</Text>
+
+                        <View style={styles.cardMorningPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}
@@ -129,13 +149,12 @@ const UpdateTkb = ({ navigation, route}) => {
                                 style={styles.input}
                             />
                         </View>
-                    </View>
 
-                    {/* Afternoon Part */}
-                    <View style={[styles.afternoonPart, styles.afternoonPartElevated]}>
-                        <View style={styles.afternoonPartBody}>
-                            <Text style={styles.afternoonPartTitle}>Buổi Chiều</Text>
-                            <Text style={styles.afternoonPartText}>Tiết 1</Text>
+                        <Text style={styles.afternoonPartTitle}>Buổi Chiều</Text>
+
+                        <Text style={styles.afternoonPartText}>Tiết 1</Text>
+
+                        <View style={styles.cardAfternoonPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}
@@ -144,7 +163,11 @@ const UpdateTkb = ({ navigation, route}) => {
                                 value={currentAl1}
                                 style={styles.input}
                             />
-                            <Text style={styles.afternoonPartText}>Tiết 2</Text>
+                        </View>
+
+                        <Text style={styles.afternoonPartText}>Tiết 2</Text>
+
+                        <View style={styles.cardAfternoonPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}
@@ -153,7 +176,11 @@ const UpdateTkb = ({ navigation, route}) => {
                                 value={currentAl2}
                                 style={styles.input}
                             />
-                            <Text style={styles.afternoonPartText}>Tiết 3</Text>
+                        </View>
+
+                        <Text style={styles.afternoonPartText}>Tiết 3</Text>
+
+                        <View style={styles.cardAfternoonPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}
@@ -162,7 +189,11 @@ const UpdateTkb = ({ navigation, route}) => {
                                 value={currentAl3}
                                 style={styles.input}
                             />
-                            <Text style={styles.afternoonPartText}>Tiết 4</Text>
+                        </View>
+
+                        <Text style={styles.afternoonPartText}>Tiết 4</Text>
+
+                        <View style={styles.cardAfternoonPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}
@@ -171,7 +202,11 @@ const UpdateTkb = ({ navigation, route}) => {
                                 value={currentAl4}
                                 style={styles.input}
                             />
-                            <Text style={styles.afternoonPartText}>Tiết 5</Text>
+                        </View>
+
+                        <Text style={styles.afternoonPartText}>Tiết 5</Text>
+
+                        <View style={styles.cardAfternoonPart}>
                             <TextInput 
                                 editable
                                 numberOfLines={1}

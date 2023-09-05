@@ -6,30 +6,52 @@ const styles = StyleSheet.create({
         backgroundColor: 'orange'
     },
 
-    bodyPart: {
+    // Day Name Part
+    dayNamePart: {
         justifyContent: 'center',
         alignItems: 'center'
     },
 
-    // Day Name Part
-    dayNamePart: {
+    cardDayNamePart: {
         backgroundColor: 'white',
         borderRadius: 10,
         width: "80%",
     },
 
     dayNameTitle: {
-        padding: 20
+        padding: 20,
+        fontSize: 18,
+        fontWeight: 'bold'
     },
 
-    morningPartBody: {
+    // Lession Part
+    lessionPart: {
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
 
+    lessionPartElevated: {
+        elevation: 22
+    },
+
+    cardMorningPart: {
+        backgroundColor: 'white',
+        borderRadius: 10,
+        width: "80%",
+    },
+
+    cardAfternoonPart: {
+        backgroundColor: 'white',
+        borderRadius: 10,
+        width: "80%",
     },
 
     input: {
-        padding:20,
+        padding:10,
         backgroundColor: 'white',
         borderRadius: 10,
+        textAlign: 'center',
+        fontSize: 16
     },
 })
 
