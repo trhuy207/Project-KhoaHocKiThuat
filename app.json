@@ -2,7 +2,8 @@
   "expo": {
     "scheme": "acme",
     "web": {
-      "bundler": "metro"
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router"
@@ -17,11 +18,16 @@
         "projectId": "ef016508-824a-4827-a64c-d905c3fc3ba7"
       }
     },
-    "android": {
-      "package": "com.quochuyph207.ProjectKhoaHocKiThuat"
-    },
     "ios": {
+      "supportsTablet": true,
       "bundleIdentifier": "com.quochuyph207.ProjectKhoaHocKiThuat"
+    },
+    "android": {
+      "package": "com.quochuyph207.ProjectKhoaHocKiThuat",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
     }
   }
 }
